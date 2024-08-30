@@ -1,16 +1,12 @@
 import './inputOnlyOption.css'
 
-function InputOnlyOption(props) {
+function InputOnlyOption({titulo, img, precio, tittleC}) {
     return (
       <>
     <div class="container">
-      <h1>{props.tituloCate}</h1>
-            <h3>{props.text}</h3>
-            <p>{props.price}</p>
-            <img class="imagen" src={props.img} alt="" srcset="" />
-        <label htmlFor="">
-            <input type="radio" />
-        </label>
+            <h3>{titulo}</h3>
+            <p>{precio}</p>
+            <img class="imagen" src={img} alt="" srcset="" />
         </div>
       </>
     )

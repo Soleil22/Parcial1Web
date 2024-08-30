@@ -1,13 +1,39 @@
 import InputOnlyOption from "../inputOnlyOption/inputOnlyOption";
+import planDeViajes from "../../dataBase/dataBase";
+import './containerCategories.css'
 
-function ContainerCategories(){
+function ContainerCategories() {
     return (
         <>
-        <InputOnlyOption tituloCate="Categoria 1" img="https://picsum.photos/200/300" text="Desayunito" price="20 pesitos"></InputOnlyOption>
-        <InputOnlyOption tituloCate="Categoria 2" img="https://picsum.photos/200/300" text="Hotel" price="2000 pesitos"></InputOnlyOption>
-        <InputOnlyOption tituloCate="Categoria 3" img="https://picsum.photos/200/300" text="Destino" price="200 pesitos"></InputOnlyOption>
+            <div className="categories1">
+            <h1>Categoria 1</h1>
+                <div className="food">
+                    {planDeViajes.alimentacion.map((item, index) => (
+                        <InputOnlyOption
+                            key={index}
+                            Category="Alimentación" 
+                            img={item.imagen} 
+                            titulo={item.titulo} 
+                            precio={`${item.precio} Pesitos`} />
+                    ))}
+                </div>
+            </div>
+
+            <div className="categories2">
+            <h1>Categoria 2</h1>
+                <div className="hotel">
+                    {planDeViajes.hoteles.map((item, index) => (
+                        <InputOnlyOption
+                            key={index}
+                            Category="Alimentación" 
+                            img={item.imagen} 
+                            titulo={item.titulo} 
+                            precio={`${item.precio} Pesitos`} />
+                    ))}
+                </div>
+            </div>
         </>
-    )
+    );
 }
 
 export default ContainerCategories;
