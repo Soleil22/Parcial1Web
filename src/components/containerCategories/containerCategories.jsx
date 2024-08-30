@@ -25,10 +25,10 @@ function ContainerCategories() {
                     {planDeViajes.hoteles.map((item, index) => (
                         <InputOnlyOption
                             key={index}
-                            Category="Alimentación" 
+                            Category="Hoteles" 
                             img={item.imagen} 
-                            titulo={item.titulo} 
-                            precio={`${item.precio} Pesitos`} />
+                            titulo={item.nombre} 
+                            precio={`${item.costo} Pesitos`} />
                     ))}
                 </div>
             </div>
